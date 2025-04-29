@@ -123,14 +123,16 @@ The  scenarios_generator.py  script generates scenarios for UAV-UGV cooperative 
 
 Install dependencies:
 
-```bash pip  install  numpy
+```bash 
+pip  install  numpy
 ```
 
 ## Usage
 
 Run the script with:
 
-``` python  scenarios_generator.py  [OPTIONS]
+```bash
+ python  scenarios_generator.py  [OPTIONS]
 ```
 
 ### Options
