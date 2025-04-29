@@ -96,6 +96,12 @@ python solver_heu.py [OPTIONS]
 
 
 
+<br>
+<br>
+<br>
+
+
+
 
 
 
@@ -159,3 +165,24 @@ Run the script with:
 ## Output
 
 -   Saves the scenario as  `<scale>_scenario_data.pkl`  in the specified folder.
+
+
+<br>
+<br>
+<br>
+
+## Citation
+
+This work is based on our research titled **"Cooperative Multi-Agent Planning Framework for Fuel-Constrained UAV-UGV Routing Problem"**. If you use this work in your research, please cite the following paper:
+
+```bibtex
+@article{mondal2025cooperative,
+  title={Cooperative Multi-Agent Planning Framework for Fuel-Constrained UAV-UGV Routing Problem},
+  author={Mondal, Md Safwan and Ramasamy, Subramanian and Humann, James D and Dotterweich, James M and Reddinger, Jean-Paul F and Childers, Marshal A and Bhounsule, Pranav A},
+  journal={Journal of Intelligent \& Robotic Systems},
+  volume={111},
+  number={1},
+  pages={1--17},
+  year={2025},
+  publisher={Springer}
+}
