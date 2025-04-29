@@ -49,11 +49,15 @@ Run the script with:
 
 1.  Generate a Type A scenario:
     
-    python  scenarios_generator.py  --type  A
+    ```bash
+        python  scenarios_generator.py  --type  A
+    ```
     
 2.  Generate a Type B scenario with a custom radius:
     
-    python  scenarios_generator.py  --type  B  --radius  1.0  --scale  MS
+    ```bash
+    python  scenarios_generator.py  --type  B --scale  MS
+    ```
     
 
 ## Output

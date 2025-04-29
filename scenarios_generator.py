@@ -14,18 +14,15 @@ import math
 
 
 #### Notes ###
-'''
-The task point coordinates are specified in miles, while the distances between points are calculated in feet using the Euclidean distance formula. 
-
-Scenarios are categorized into two types:
-1. **Type A**: UAV points are identical to UGV points, representing the road network.
-2. **Type B**: UAV points differ from UGV points. UGV points represent the road network, while UAV points are randomly scattered around the road network within a specified radius.
-
-Key details:
-- UAV points in Type B are generated randomly within a defined radius from UGV points.
-- The coordinates of all points are generated randomly within a specified range.
-- The number of points in each branch depends on the scenario scale (e.g., small, medium, or large).
-- The generated scenario is saved as a pickle file in a designated folder for further use.
+''' The task points coordinates are in miles and the distance between two points is in feet.
+    The distance between two points is calculated using the Euclidean distance formula. 
+    Scenarios can be of two types: A and B.
+    In type A, the UAV points are the same as the UGV points, which represent the road network. 
+    In type B, the UAV points are different from the UGV points. The UGV points represent the road network, while the UAV points are scattered around the road network.
+    The UAV points are generated randomly within a specified radius from the UGV points.
+    The coordinates of the points are generated randomly within a specified range. 
+    The number of points in each branch is determined by the scale of the scenario.
+    The scenario is saved as a pickle file in a specified folder.
 '''
 
 def scenatio_generator(scale, type, plotting = True):
@@ -203,8 +200,9 @@ if __name__ == "__main__":
                         help="Scenario type identifier (e.g., 'A')")
     parser.add_argument(
     "--plotting",
-    action="store_true",
-    help="Include this flag if you want to plot the scenario"
+    type=lambda x: (str(x).lower() == 'true'),
+    default=True,
+    help="Set plotting True or False"
 )
 
     args = parser.parse_args()
