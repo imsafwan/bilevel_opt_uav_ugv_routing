@@ -1,3 +1,70 @@
+
+
+# 
+# README: Scenario Generator for UAV-UGV Mission Planning
+
+## Overview
+
+The  scenarios_generator.py  script generates scenarios for UAV-UGV cooperative mission planning. It supports two types of scenarios:
+
+-   **Type A**: UAV points are identical to UGV points (road network).
+-   **Type B**: UAV points are scattered randomly around UGV points within a specified radius.
+
+## Features
+
+-   Customizable number of points, radius, and coordinate range.
+-   Supports small (`SS`), medium (`MS`), and large (`LS`) scales.
+-   Saves scenarios as pickle files for use in optimization scripts.
+
+## Requirements
+
+-   Python 3.7+
+-   Libraries:  `numpy`,  `pickle`,  `os`
+
+Install dependencies:
+
+```bash 
+pip  install  numpy
+```
+
+## Usage
+
+Run the script with:
+
+```bash
+ python  scenarios_generator.py  [OPTIONS]
+```
+
+### Options
+
+| Argument         | Type    | Default               | Description                                                                 |
+|-------------------|---------|-----------------------|-----------------------------------------------------------------------------|
+| `--scale`         | `str`   | `SS`                 | Scenario scale: `SS` (small), `MS` (medium), `LS` (large).                 |
+| `--type`          | `str`   | `A`                  | scenario type  |                                |
+| `--plotting`      | `bool`  | `True`               | Enable or disable plotting (`True` or `False`).     
+
+
+
+### Examples
+
+1.  Generate a Type A scenario:
+    
+    python  scenarios_generator.py  --type  A
+    
+2.  Generate a Type B scenario with a custom radius:
+    
+    python  scenarios_generator.py  --type  B  --radius  1.0  --scale  MS
+    
+
+## Output
+
+-   Saves the scenario as  `<scale>_scenario_data.pkl`  in the specified folder.
+
+
+<br>
+<br>
+<br>
+
 #
 # README: UAV-UGV Cooperative Mission Planning Solver
 
@@ -102,74 +169,6 @@ python solver_heu.py [OPTIONS]
 
 
 
-
-
-
-
-# 
-# README: Scenario Generator for UAV-UGV Mission Planning
-
-## Overview
-
-The  scenarios_generator.py  script generates scenarios for UAV-UGV cooperative mission planning. It supports two types of scenarios:
-
--   **Type A**: UAV points are identical to UGV points (road network).
--   **Type B**: UAV points are scattered randomly around UGV points within a specified radius.
-
-## Features
-
--   Customizable number of points, radius, and coordinate range.
--   Supports small (`SS`), medium (`MS`), and large (`LS`) scales.
--   Saves scenarios as pickle files for use in optimization scripts.
-
-## Requirements
-
--   Python 3.7+
--   Libraries:  `numpy`,  `pickle`,  `os`
-
-Install dependencies:
-
-```bash 
-pip  install  numpy
-```
-
-## Usage
-
-Run the script with:
-
-```bash
- python  scenarios_generator.py  [OPTIONS]
-```
-
-### Options
-
-| Argument         | Type    | Default               | Description                                                                 |
-|-------------------|---------|-----------------------|-----------------------------------------------------------------------------|
-| `--scale`         | `str`   | `SS`                 | Scenario scale: `SS` (small), `MS` (medium), `LS` (large).                 |
-| `--type`          | `str`   | `A`                  | scenario type  |                                |
-| `--plotting`      | `bool`  | `True`               | Enable or disable plotting (`True` or `False`).     
-
-
-
-### Examples
-
-1.  Generate a Type A scenario:
-    
-    python  scenarios_generator.py  --type  A
-    
-2.  Generate a Type B scenario with a custom radius:
-    
-    python  scenarios_generator.py  --type  B  --radius  1.0  --scale  MS
-    
-
-## Output
-
--   Saves the scenario as  `<scale>_scenario_data.pkl`  in the specified folder.
-
-
-<br>
-<br>
-<br>
 
 ## Citation
 
